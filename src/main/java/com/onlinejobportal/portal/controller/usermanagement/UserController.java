@@ -2,7 +2,7 @@ package com.onlinejobportal.portal.controller.usermanagement;
 
 import com.onlinejobportal.common.constant.Constants;
 import com.onlinejobportal.common.dto.ResponseDto;
-import com.onlinejobportal.portal.handler.UserAccountHandler;
+import com.onlinejobportal.portal.handler.UserHandler;
 import com.onlinejobportal.portal.model.dos.UserAccount;
 import com.onlinejobportal.portal.model.dos.UserLog;
 import com.onlinejobportal.portal.model.dos.UserType;
@@ -10,8 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
-import static com.onlinejobportal.common.constant.Constants.*;
 
 /**
  * Created by pankaj on 08,2018
@@ -21,7 +19,7 @@ import static com.onlinejobportal.common.constant.Constants.*;
 public class UserController {
 
     @Autowired
-    private UserAccountHandler userAccountHandler;
+    private UserHandler userAccountHandler;
 
     @GetMapping(Constants.USER_LOG)
     public List<UserLog> getAllUserLogs(){
